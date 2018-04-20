@@ -1,8 +1,10 @@
 <?php /* Template Name: Lifestyle */ ?>
+
+Hi???
 <?php
-$filters = get_terms( 'lifestyle_filter' );
-$redirect = get_term_link($filters[0]);
-header("Location: ".$redirect)
+// $filters = get_terms( 'lifestyle_filter' );
+// $redirect = get_term_link($filters[0]);
+// header("Location: ".$redirect)
 //print_r($filters);
 //print_r($redirect);
 ?>
@@ -11,7 +13,7 @@ header("Location: ".$redirect)
   <section id="portfolio">
     <div class="projects">
 <?php
-		
+
   $filters = get_terms( 'lifestyle_filter' );
   $args = array('post_type'=>'lifestyle','posts_per_page'=>-1);
   $portfolio = new WP_Query($args);
@@ -37,7 +39,7 @@ header("Location: ".$redirect)
     </div>
   </section>
 <?php get_footer(); ?>
-<!-- 
+<!--
 <?php print_r($filters); ?>
 -->
 */ ?>
