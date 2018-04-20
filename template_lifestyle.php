@@ -2,7 +2,7 @@
 
 <pre>
 <?php
-$filters = get_terms( 'lifestyle_filter' );
+$filters = get_terms( 'product_filter' );
 // $redirect = get_term_link($filters[0]);
 // header("Location: ".$redirect)
 print_r($filters);
