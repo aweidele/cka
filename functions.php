@@ -95,6 +95,7 @@ function cka_register() {
 		'hierarchical' => false,
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
+    'has_archive' => true,
 		//"menu_position" => 21
 	  );
 
