@@ -1,0 +1,141 @@
+/* TOPLEVEL CONTENT */
+$contentWidth: 920px;
+$contentSpacing: 30px;
+$columnWidth: 445px;
+
+.headers {
+    @extend .sg;
+    font-weight: $sgmed;
+    color: $green;
+    font-size: 1.500em;
+    line-height: 1.1em;
+    margin-bottom: 1em;
+    text-transform: lowercase;
+}
+
+#toplevelSlideshow {
+  height: 425px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: $contentSpacing;
+  position: relative;
+  
+  .slide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.25s;
+    &.active {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  @media screen and (min-width: 1600px) { height: 525px; }
+  @media screen and (max-width: 1175px) { height: 325px; }
+  @media screen and (max-width: 925px) { height: 225px; }
+  @media screen and (max-width: 625px) { height: 175px; }
+  @media screen and (max-width: 500px) { height: 200px; img { width: 150%; left: -25%; } }
+  @media screen and (max-width: 450px) { img { width: 180%; left: -40%; } }
+}
+
+#toplevelContent {
+  width: $contentWidth;
+  margin: auto;
+  padding-bottom: $contentSpacing;
+  @extend .headers;
+}
+
+.childPages section {
+  width: $contentWidth;
+  margin: auto;
+  padding-bottom: $contentSpacing;
+  margin-bottom: $contentSpacing;
+  border-bottom: 1px solid $lightergray;
+  @extend .av;
+  @extend .clearAfter;
+  p { margin-bottom: 1em; }
+  a {
+    color: $green;
+    &:hover { color: black; }
+  }
+}
+
+.childPages {
+  section {
+    font-size: 0.938em;
+    line-height: 1.4em;
+    
+    .sectionImage {
+      width: $columnWidth;
+      float: left;
+    }
+    
+    .sectionContent {
+      width: $columnWidth;
+      float: right;
+    }
+    
+    &:nth-child(2n+1) {
+      .sectionImage { float: right; }
+      .sectionContent { float: left; }
+    }
+    
+    &:last-child { border: 0; }
+    
+  }
+  
+  .sectionQuote {
+    padding-bottom: $contentSpacing;
+    p {
+      display: inline;
+      &.quote {
+        @extend .headers;
+        //font-weight: $sglight;
+        &:before { content: '“'; }
+        &:after { content: '”'; }
+      }
+      &.attribute {
+        color: $lightgray;
+        &:before { content: '— '; }
+      }
+    }
+  }
+  
+  
+  h2 { @extend .headers; }
+  
+  h3,&#product h2 {
+    @extend .av;
+    font-weight: $avmed;
+    color: $green;
+    font-size: 1em;
+    font-weight: $avheavy;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  
+  strong { font-weight: $avheavy; }
+  
+}
+
+.column {
+  width: $columnWidth;
+  float: left;
+  &:last-child { float: right; }
+}
+
+p.award {
+  a { color: $darkgray;
+    &:hover { color: $green; }
+  }
+}

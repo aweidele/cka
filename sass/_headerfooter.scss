@@ -1,0 +1,123 @@
+$headerheight: 120px;
+$logoheight: 100px;
+$logowidth: $logoheight * 1.08;
+
+$navwidth: 1170px;
+$navheight: 20px;
+$navpad: 18px;
+$navspace: 44px - $navpad;
+
+$navTop: 50px;
+$hpNavTop: 80px;
+
+/* HEADER */
+header {
+  height: $headerheight;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(white,0.95);
+  z-index: 999999;
+  
+  #headerWrapper {
+    width: $navwidth;
+    margin: auto;
+    position: relative;
+    //background-color: rgba(black,0.1);
+  }
+  
+  h1 {
+    width: $logowidth;
+    height: $logoheight;
+    margin: 20px auto;
+    background-image: url("images/108x100-logo.png");
+    position: relative;
+    z-index: 1000;
+    
+    a { @include linkblock(); }
+  }
+  
+  nav:not(.subnav) {
+    width: 100%;
+    position: absolute;
+    top: $navTop;
+    
+    ul {
+      width: round(($navwidth / 2) - ($logowidth / 2) - $navspace);
+      height: $navheight;
+      
+      &:first-child {
+        float: left;
+        text-align: right;
+      }
+      
+      &:last-child {
+        float: right;
+        text-align: left;
+      }
+      
+    }
+    
+    li {
+      @extend .sg;
+      font-size: 1.125em;
+      font-weight: $sglight;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: $navheight;
+      display: inline-block;
+      border-right: 1px solid #000000;
+      
+      &:last-child { border-right: 0; }
+      
+      a {
+        display: inline-block;
+        padding: 0 $navpad;
+        text-decoration: none;
+        color: $darkgray;
+        
+        &:hover { color: $green; }
+      }
+    }
+    
+  }
+  
+  &.homepage {
+    nav { top: $hpNavTop; }
+  }
+  
+}
+
+#contentWrapper {
+  margin-top: $headerheight + 20;
+}
+
+/* FOOTER */
+$footerHeight: 36px;
+$footerNavHeight: 16px;
+footer {
+
+  @extend .av;
+  height: $footerHeight;
+  background-color: $lightgray;
+  font-size: 0.875em;
+  color: #FFFFFF;
+  text-align: center;
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    &:hover { color: $green; }
+  }
+  
+  ul,li { display: inline-block; }
+  ul { padding-top: round(($footerHeight - $footerNavHeight) / 2);
+    li {
+      line-height: $footerNavHeight;
+      border-left: 1px solid #FFFFFF;
+      padding: 0px 12px;
+    }
+    &:first-child li:first-child { border: 0; }
+  }
+}

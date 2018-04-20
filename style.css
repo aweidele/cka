@@ -1,0 +1,1652 @@
+/*
+Theme Name: CKA
+Description: The 2015 Theme for Carol Kurth Architects
+*/
+/* INITIALIZE */
+/* line 15, sass/main.scss */
+html, body, div, header, footer, section, nav, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+/* line 23, sass/main.scss */
+header, footer, section, nav {
+  display: block;
+}
+
+/* line 24, sass/main.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 25, sass/main.scss */
+strong, em {
+  font-style: none;
+  font-weight: normal;
+}
+
+/* line 29, sass/main.scss */
+a {
+  outline: none;
+  transition: color 0.5s;
+}
+
+/* line 33, sass/main.scss */
+.clear {
+  clear: both;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'CKA Glyphs';
+  src: url("inc/fonts/CKA-Font.eot");
+  src: url("inc/fonts/CKA-Font?#iefix") format("embedded-opentype"), url("inc/fonts/CKA-Font.woff") format("woff"), url("inc/fonts/CKA-Font.ttf") format("truetype"), url("inc/fonts/CKA-Font.svg#CKA-Font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 47, sass/main.scss */
+.av, header nav.subnav li, footer, #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline, .childPages section, .childPages h3, .childPages#product h2, #portfolio .project p, #realEstate .project p, #projectGallery .slideshowControls li, #inspiration .slideshowControls li, #projectGallery .slideshowControls p, #inspiration .slideshowControls p, #projectGallery .slideshowControls button, #inspiration .slideshowControls button, #projectGallery .slideshowCaption h3, #projectCopy, #realEstate .project h3, #realEstate .pageCopy, #newsFilters, #news, #contactContent, #feedback {
+  font-family: 'Avenir W01','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+/* line 48, sass/main.scss */
+.avn {
+  font-family: 'Avenir Next W01','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* line 49, sass/main.scss */
+.sg, header nav:not(.subnav) li, footer ul.footernav li, #homepage_slideshow .slide h2, #inspiration .slide h2, #homepage_slideshow .slide p.caption, #inspiration .slide p.caption, .headers, #toplevelContent, .childPages .sectionQuote p.quote, .childPages h2, #contactContent h2, #portfolio .project h2, #realEstate .project h2, #projectGallery .slideshowCaption h2, #projectCopy h2 {
+  font-family: 'Sackers Gothic W01','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* line 50, sass/main.scss */
+.glyphs, header label.hamburger, footer ul.social a:after, #projectGallery .slideshowControls button:after, #inspiration .slideshowControls button:after, .glyphtest {
+  font-family: 'CKA Glyphs';
+}
+
+/* line 72, sass/main.scss */
+.clearAfter:after, .childPages section:after, .teamRow:after, #portfolio .projects:after, #realEstate .projects:after, #projectCopy:after, #news:after, #newsfeed:after, #contact:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* HEADER */
+/* line 19, sass/_headerfooter.scss */
+header {
+  height: 110px;
+  padding-bottom: 12px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 99998;
+}
+/* line 30, sass/_headerfooter.scss */
+header #headerWrapper {
+  width: 1170px;
+  margin: auto;
+  position: relative;
+}
+/* line 37, sass/_headerfooter.scss */
+header h1 {
+  width: 108px;
+  height: 100px;
+  margin: 10px auto;
+  background-image: url("images/ck_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+  z-index: 1000;
+}
+/* line 47, sass/_headerfooter.scss */
+header h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -999999px;
+}
+/* line 50, sass/_headerfooter.scss */
+header .sublogos {
+  position: absolute;
+  width: 100%;
+  top: 22px;
+}
+/* line 54, sass/_headerfooter.scss */
+header .sublogos p {
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 485px;
+  float: left;
+  text-indent: -999999px;
+}
+/* line 62, sass/_headerfooter.scss */
+header .sublogos p:last-child {
+  float: right;
+}
+/* line 63, sass/_headerfooter.scss */
+header .sublogos p.architecture {
+  background-image: url("images/ck_architecture.svg");
+  background-position: right center;
+}
+/* line 64, sass/_headerfooter.scss */
+header .sublogos p.interiors {
+  background-image: url("images/ck_interiors.svg");
+  background-position: left center;
+}
+/* line 68, sass/_headerfooter.scss */
+header nav {
+  width: 100%;
+  position: absolute;
+}
+/* line 72, sass/_headerfooter.scss */
+header nav ul {
+  width: 505px;
+}
+/* line 75, sass/_headerfooter.scss */
+header nav ul:first-child {
+  float: left;
+  text-align: right;
+}
+/* line 80, sass/_headerfooter.scss */
+header nav ul:last-child {
+  float: right;
+  text-align: left;
+}
+/* line 87, sass/_headerfooter.scss */
+header nav li {
+  display: inline-block;
+}
+/* line 90, sass/_headerfooter.scss */
+header nav li a {
+  display: inline-block;
+  padding: 0 18px;
+  text-decoration: none;
+  color: #333333;
+}
+/* line 96, sass/_headerfooter.scss */
+header nav li a:hover, header nav li a .active {
+  color: #83A94E;
+}
+/* line 100, sass/_headerfooter.scss */
+header nav:not(.subnav) {
+  top: 38px;
+}
+/* line 102, sass/_headerfooter.scss */
+header nav:not(.subnav) li {
+  font-size: 1.125em;
+  font-weight: 200;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  line-height: 20px;
+  border-right: 1px solid #000000;
+}
+/* line 110, sass/_headerfooter.scss */
+header nav:not(.subnav) li:last-child {
+  border-right: 0;
+}
+/* line 114, sass/_headerfooter.scss */
+header nav.subnav {
+  top: 77px;
+}
+/* line 116, sass/_headerfooter.scss */
+header nav.subnav li {
+  font-size: 0.938em;
+}
+/* line 125, sass/_headerfooter.scss */
+header.homepage nav {
+  top: 80px;
+}
+/* line 128, sass/_headerfooter.scss */
+header #menuToggle {
+  position: absolute;
+  left: -999999px;
+}
+/* line 132, sass/_headerfooter.scss */
+header label.hamburger {
+  display: none;
+}
+
+/* line 136, sass/_headerfooter.scss */
+#contentWrapper {
+  margin-top: 122px;
+  padding-bottom: 68px;
+}
+
+/* FOOTER */
+/* line 143, sass/_headerfooter.scss */
+footer {
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #666666;
+  color: #FFFFFF;
+  text-align: center;
+  z-index: 200;
+}
+/* line 154, sass/_headerfooter.scss */
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-block;
+}
+/* line 158, sass/_headerfooter.scss */
+footer a:hover {
+  color: #83A94E;
+}
+/* line 161, sass/_headerfooter.scss */
+footer ul:not(.footernav), footer li {
+  display: inline-block;
+}
+/* line 162, sass/_headerfooter.scss */
+footer ul:not(.footernav) li {
+  font-size: 0.875em;
+}
+/* line 165, sass/_headerfooter.scss */
+footer ul li {
+  line-height: 24px;
+  border-left: 1px solid #FFFFFF;
+  padding: 0px 12px;
+  height: 16px;
+  line-height: 16px;
+}
+/* line 171, sass/_headerfooter.scss */
+footer ul li:first-child {
+  border: 0;
+}
+/* line 173, sass/_headerfooter.scss */
+footer ul:first-child li:first-child {
+  border: 0;
+}
+/* line 177, sass/_headerfooter.scss */
+footer ul.social li {
+  border-left: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+/* line 186, sass/_headerfooter.scss */
+footer ul.social li span {
+  display: block;
+  position: absolute;
+  left: -999999px;
+}
+/* line 187, sass/_headerfooter.scss */
+footer ul.social li.facebook a:after {
+  content: "f";
+}
+/* line 188, sass/_headerfooter.scss */
+footer ul.social li.twitter a:after {
+  content: "t";
+}
+/* line 189, sass/_headerfooter.scss */
+footer ul.social li.instagram a:after {
+  content: "i";
+}
+/* line 190, sass/_headerfooter.scss */
+footer ul.social li.houzz a:after {
+  content: "h";
+}
+/* line 192, sass/_headerfooter.scss */
+footer ul.social a {
+  color: #666666;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* line 198, sass/_headerfooter.scss */
+footer ul.social a:hover {
+  color: #83A94E;
+}
+/* line 201, sass/_headerfooter.scss */
+footer ul.footernav {
+  padding: 12px 0 2px 0;
+}
+/* line 203, sass/_headerfooter.scss */
+footer ul.footernav li {
+  text-transform: lowercase;
+  font-size: 1.125em;
+}
+
+/* HOMEPAGE */
+/* line 2, sass/_homepage.scss */
+#homepage_slideshow, #inspiration {
+  position: relative;
+  overflow: hidden;
+}
+/* line 6, sass/_homepage.scss */
+#homepage_slideshow .slide, #inspiration .slide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+/* line 16, sass/_homepage.scss */
+#homepage_slideshow .slide.active, #inspiration .slide.active {
+  opacity: 1;
+  z-index: 100;
+}
+/* line 18, sass/_homepage.scss */
+#homepage_slideshow .slide img, #inspiration .slide img {
+  display: block;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+/* line 27, sass/_homepage.scss */
+#homepage_slideshow .slide .slide_caption, #inspiration .slide .slide_caption {
+  position: absolute;
+  top: 69%;
+  left: 33%;
+  color: #FFFFFF;
+  z-index: 50;
+}
+/* line 35, sass/_homepage.scss */
+#homepage_slideshow .slide h2, #inspiration .slide h2 {
+  font-size: 2.250em;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+/* line 41, sass/_homepage.scss */
+#homepage_slideshow .slide h2 strong, #inspiration .slide h2 strong {
+  font-weight: 800;
+}
+/* line 44, sass/_homepage.scss */
+#homepage_slideshow .slide p.caption, #inspiration .slide p.caption {
+  font-size: 1.500em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #83A94E;
+  letter-spacing: 1px;
+  margin-left: 117px;
+}
+/* line 54, sass/_homepage.scss */
+#homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline {
+  font-size: 1.125em;
+  font-weight: 300;
+  margin-left: 62px;
+  letter-spacing: 1px;
+}
+/* line 60, sass/_homepage.scss */
+#homepage_slideshow .slide p.tagline:after, #inspiration .slide p.tagline:after {
+  content: " ";
+}
+
+/* TOPLEVEL CONTENT */
+/* line 7, sass/_toplevel.scss */
+.headers, #toplevelContent, .childPages .sectionQuote p.quote, .childPages h2, #contactContent h2 {
+  font-weight: 500;
+  color: #83A94E;
+  font-size: 1.500em;
+  line-height: 1.1em;
+  margin-bottom: 0.667em;
+  text-transform: lowercase;
+}
+
+/* line 17, sass/_toplevel.scss */
+#toplevelSlideshow {
+  height: 425px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+}
+/* line 24, sass/_toplevel.scss */
+#toplevelSlideshow .slide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+/* line 32, sass/_toplevel.scss */
+#toplevelSlideshow .slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+/* line 38, sass/_toplevel.scss */
+#toplevelSlideshow img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+@media screen and (min-width: 1600px) {
+  /* line 17, sass/_toplevel.scss */
+  #toplevelSlideshow {
+    height: 525px;
+  }
+}
+@media screen and (max-width: 1175px) {
+  /* line 17, sass/_toplevel.scss */
+  #toplevelSlideshow {
+    height: 325px;
+  }
+}
+@media screen and (max-width: 925px) {
+  /* line 17, sass/_toplevel.scss */
+  #toplevelSlideshow {
+    height: 225px;
+  }
+}
+@media screen and (max-width: 625px) {
+  /* line 17, sass/_toplevel.scss */
+  #toplevelSlideshow {
+    height: 175px;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 17, sass/_toplevel.scss */
+  #toplevelSlideshow {
+    height: 200px;
+  }
+  /* line 48, sass/_toplevel.scss */
+  #toplevelSlideshow img {
+    width: 150%;
+    left: -25%;
+  }
+}
+@media screen and (max-width: 450px) {
+  /* line 49, sass/_toplevel.scss */
+  #toplevelSlideshow img {
+    width: 180%;
+    left: -40%;
+  }
+}
+
+/* line 52, sass/_toplevel.scss */
+#toplevelContent {
+  width: 920px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+/* line 59, sass/_toplevel.scss */
+.childPages section {
+  width: 920px;
+  margin: auto;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #999999;
+}
+/* line 67, sass/_toplevel.scss */
+.childPages section p {
+  margin-bottom: 1em;
+}
+/* line 68, sass/_toplevel.scss */
+.childPages section a {
+  color: #83A94E;
+}
+/* line 70, sass/_toplevel.scss */
+.childPages section a:hover {
+  color: black;
+}
+
+/* line 75, sass/_toplevel.scss */
+.childPages section {
+  font-size: 0.938em;
+  line-height: 1.4em;
+}
+/* line 79, sass/_toplevel.scss */
+.childPages section .sectionImage {
+  width: 445px;
+  float: left;
+}
+/* line 84, sass/_toplevel.scss */
+.childPages section .sectionContent {
+  width: 445px;
+  float: right;
+}
+/* line 90, sass/_toplevel.scss */
+.childPages section:nth-child(2n+1) .sectionImage {
+  float: right;
+}
+/* line 91, sass/_toplevel.scss */
+.childPages section:nth-child(2n+1) .sectionContent {
+  float: left;
+}
+/* line 94, sass/_toplevel.scss */
+.childPages section:last-child {
+  border: 0;
+}
+/* line 98, sass/_toplevel.scss */
+.childPages .sectionQuote {
+  padding-bottom: 30px;
+}
+/* line 108, sass/_toplevel.scss */
+.childPages .sectionQuote p.attribute {
+  color: #666666;
+  text-align: right;
+}
+/* line 119, sass/_toplevel.scss */
+.childPages h3, .childPages#product h2 {
+  font-weight: 500;
+  color: #83A94E;
+  font-size: 1em;
+  font-weight: 800;
+  margin-bottom: 0;
+  text-transform: none;
+}
+/* line 129, sass/_toplevel.scss */
+.childPages strong {
+  font-weight: 800;
+}
+
+/* line 133, sass/_toplevel.scss */
+.column, .team {
+  width: 445px;
+  float: left;
+}
+/* line 136, sass/_toplevel.scss */
+.column:last-child, .team:last-child {
+  float: right;
+}
+
+/* line 140, sass/_toplevel.scss */
+p.award a {
+  color: #333333;
+}
+/* line 141, sass/_toplevel.scss */
+p.award a:hover {
+  color: #83A94E;
+}
+
+/* line 153, sass/_toplevel.scss */
+.team img {
+  display: block;
+  margin-bottom: 1em;
+}
+
+/* PORTFOLIO */
+/* line 13, sass/_portfolio.scss */
+#portfolio, #realEstate {
+  background-color: #DCDCDC;
+  transition: height 0.25s;
+  min-height: calc(100vh - 190px);
+}
+/* line 18, sass/_portfolio.scss */
+#portfolio .project, #realEstate .project {
+  width: 368px;
+  height: 368px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF;
+}
+/* line 25, sass/_portfolio.scss */
+#portfolio .project a, #realEstate .project a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 28, sass/_portfolio.scss */
+#portfolio .project a:hover, #realEstate .project a:hover {
+  color: #83A94E;
+}
+/* line 31, sass/_portfolio.scss */
+#portfolio .project .photo img, #realEstate .project .photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 37, sass/_portfolio.scss */
+#portfolio .project .blurb, #realEstate .project .blurb {
+  padding: 19px 23px 10px 23px;
+}
+/* line 40, sass/_portfolio.scss */
+#portfolio .project h2, #realEstate .project h2 {
+  font-size: 0.875em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+/* line 47, sass/_portfolio.scss */
+#portfolio .project p, #realEstate .project p {
+  font-size: 0.938em;
+}
+/* line 53, sass/_portfolio.scss */
+#portfolio .projects, #realEstate .projects {
+  padding: 10px;
+  margin: auto;
+}
+@media screen and (max-width: 1154px) and (min-width: 776px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 746px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(2n), #realEstate .projects .project:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1532px) and (min-width: 1154px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 1124px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(3n), #realEstate .projects .project:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1910px) and (min-width: 1532px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 1502px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(4n), #realEstate .projects .project:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 2288px) and (min-width: 1910px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 1880px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(5n), #realEstate .projects .project:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 2666px) and (min-width: 2288px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 2258px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(6n), #realEstate .projects .project:nth-child(6n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 3044px) and (min-width: 2666px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 2636px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(7n), #realEstate .projects .project:nth-child(7n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 3422px) and (min-width: 3044px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: 3014px;
+  }
+  /* line 62, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(8n), #realEstate .projects .project:nth-child(8n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 776px) and (min-width: 479px) {
+  /* line 53, sass/_portfolio.scss */
+  #portfolio .projects, #realEstate .projects {
+    width: auto;
+  }
+  /* line 68, sass/_portfolio.scss */
+  #portfolio .projects .project, #realEstate .projects .project {
+    width: 48%;
+    margin-right: 2%;
+  }
+  /* line 71, sass/_portfolio.scss */
+  #portfolio .projects .project:nth-child(2n), #realEstate .projects .project:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 73, sass/_portfolio.scss */
+  #portfolio .projects .photo, #realEstate .projects .photo {
+    height: 287px;
+    overflow: hidden;
+  }
+  /* line 76, sass/_portfolio.scss */
+  #portfolio .projects .photo img, #realEstate .projects .photo img {
+    height: 100%;
+    width: auto;
+    position: relative;
+    left: -10%;
+  }
+}
+
+/* line 94, sass/_portfolio.scss */
+#projectGallery .slideshowControls li, #inspiration .slideshowControls li, #projectGallery .slideshowControls p, #inspiration .slideshowControls p, #projectGallery .slideshowControls button, #inspiration .slideshowControls button {
+  font-size: 0.938em;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(51, 51, 51, 0.75);
+  position: absolute;
+  z-index: 200;
+  top: 48%;
+  transition: background-color 0.5s;
+}
+/* line 106, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:hover, #inspiration .slideshowControls li:hover, #projectGallery .slideshowControls p:hover, #inspiration .slideshowControls p:hover, #projectGallery .slideshowControls button:hover, #inspiration .slideshowControls button:hover {
+  background-color: rgba(131, 169, 78, 0.75);
+}
+/* line 108, sass/_portfolio.scss */
+#projectGallery .slideshowControls li, #inspiration .slideshowControls li {
+  width: 40px;
+  cursor: pointer;
+}
+/* line 111, sass/_portfolio.scss */
+#projectGallery .slideshowControls li span, #inspiration .slideshowControls li span {
+  text-indent: -999999px;
+  position: absolute;
+  display: block;
+}
+/* line 116, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:after, #inspiration .slideshowControls li:after {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+/* line 122, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:first-child, #inspiration .slideshowControls li:first-child {
+  left: 0px;
+}
+/* line 124, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:first-child:after, #inspiration .slideshowControls li:first-child:after {
+  content: "<";
+}
+/* line 126, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:last-child, #inspiration .slideshowControls li:last-child {
+  right: 0px;
+}
+/* line 128, sass/_portfolio.scss */
+#projectGallery .slideshowControls li:last-child:after, #inspiration .slideshowControls li:last-child:after {
+  content: ">";
+}
+/* line 133, sass/_portfolio.scss */
+#projectGallery .slideshowControls p.prev, #inspiration .slideshowControls p.prev {
+  left: 42px;
+}
+/* line 134, sass/_portfolio.scss */
+#projectGallery .slideshowControls p.next, #inspiration .slideshowControls p.next {
+  right: 84px;
+}
+/* line 135, sass/_portfolio.scss */
+#projectGallery .slideshowControls p a, #inspiration .slideshowControls p a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0px 11px;
+}
+/* line 143, sass/_portfolio.scss */
+#projectGallery .slideshowControls button, #inspiration .slideshowControls button {
+  right: 42px;
+  border: 0;
+  cursor: pointer;
+  width: 40px;
+  padding: 0;
+}
+/* line 149, sass/_portfolio.scss */
+#projectGallery .slideshowControls button:focus, #inspiration .slideshowControls button:focus {
+  outline: 0;
+}
+/* line 150, sass/_portfolio.scss */
+#projectGallery .slideshowControls button span, #inspiration .slideshowControls button span {
+  position: absolute;
+  left: -999999px;
+  display: block;
+}
+/* line 155, sass/_portfolio.scss */
+#projectGallery .slideshowControls button:after, #inspiration .slideshowControls button:after {
+  content: "|";
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1em;
+}
+/* line 165, sass/_portfolio.scss */
+#projectGallery .slideshowControls button.play:after, #inspiration .slideshowControls button.play:after {
+  content: ">";
+}
+
+/* line 170, sass/_portfolio.scss */
+#projectGallery {
+  max-height: 700px;
+  overflow: hidden;
+  background-color: #333333;
+  position: relative;
+}
+/* line 176, sass/_portfolio.scss */
+#projectGallery .placeholderImage {
+  opacity: 0;
+}
+/* line 178, sass/_portfolio.scss */
+#projectGallery .placeholderImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 185, sass/_portfolio.scss */
+#projectGallery .slides {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 0;
+}
+/* line 192, sass/_portfolio.scss */
+#projectGallery .slide {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.25s;
+}
+/* line 202, sass/_portfolio.scss */
+#projectGallery .slide.active {
+  z-index: 10;
+  opacity: 1;
+}
+/* line 206, sass/_portfolio.scss */
+#projectGallery .slide img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+/* line 214, sass/_portfolio.scss */
+#projectGallery .slideshowCaption {
+  background-color: rgba(51, 51, 51, 0.75);
+  position: absolute;
+  right: 42px;
+  bottom: 40px;
+  z-index: 100;
+  padding: 18px;
+  min-width: 368px;
+  color: #FFFFFF;
+}
+/* line 223, sass/_portfolio.scss */
+#projectGallery .slideshowCaption h2 {
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #FFFFFF;
+}
+/* line 232, sass/_portfolio.scss */
+#projectGallery .slideshowCaption h3 {
+  font-size: 0.938em;
+  line-height: 1em;
+  padding-top: 10px;
+}
+
+/* line 244, sass/_portfolio.scss */
+#projectCopy h3, .related_projects h3 {
+  font-size: 0.938em;
+  font-weight: 800;
+  color: #83A94E;
+}
+
+/* line 249, sass/_portfolio.scss */
+#projectCopy p, .related_projects li {
+  font-size: 0.938em;
+  margin-bottom: 1em;
+}
+
+/* line 254, sass/_portfolio.scss */
+#projectCopy {
+  line-height: 1.4em;
+  width: 920px;
+  margin: 30px auto;
+}
+/* line 260, sass/_portfolio.scss */
+#projectCopy h2 {
+  font-weight: 800;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #83A94E;
+  margin-bottom: 0.75em;
+}
+/* line 272, sass/_portfolio.scss */
+#projectCopy .sidebar a {
+  color: #000000;
+  text-decoration: none;
+}
+/* line 275, sass/_portfolio.scss */
+#projectCopy .sidebar a:hover {
+  color: #83A94E;
+}
+/* line 277, sass/_portfolio.scss */
+#projectCopy .sidebar p {
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
+/* line 278, sass/_portfolio.scss */
+#projectCopy .sidebar div {
+  margin-bottom: 1.5em;
+}
+
+/* line 282, sass/_portfolio.scss */
+#realEstate {
+  position: relative;
+}
+/* line 286, sass/_portfolio.scss */
+#realEstate .projects {
+  padding-bottom: 130px;
+}
+/* line 287, sass/_portfolio.scss */
+#realEstate .project {
+  height: 398px;
+}
+/* line 289, sass/_portfolio.scss */
+#realEstate .project h3 {
+  font-size: 0.938em;
+  font-weight: 800;
+  color: #83A94E;
+}
+/* line 295, sass/_portfolio.scss */
+#realEstate .project p {
+  color: #333333;
+}
+/* line 296, sass/_portfolio.scss */
+#realEstate .project a {
+  color: #83A94E;
+}
+/* line 298, sass/_portfolio.scss */
+#realEstate .project a:hover {
+  color: #333333;
+}
+/* line 300, sass/_portfolio.scss */
+#realEstate .project .blurb {
+  padding: 16px 23px 23px 23px;
+}
+/* line 302, sass/_portfolio.scss */
+#realEstate .project .photo, #realEstate .project .photo img {
+  position: relative;
+  z-index: 0;
+}
+/* line 303, sass/_portfolio.scss */
+#realEstate .project .photo p.sold {
+  color: #FFFFFF;
+  font-weight: 800;
+  background-color: #83A94E;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  left: 0px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 13px 0 23px;
+  letter-spacing: 1px;
+}
+/* line 318, sass/_portfolio.scss */
+#realEstate .pageCopy {
+  font-size: 0.875em;
+  text-align: center;
+  line-height: 1.4em;
+  padding: 30px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+/* line 327, sass/_portfolio.scss */
+#realEstate .pageCopy strong {
+  font-weight: 800;
+}
+
+/* NEWS */
+/* line 3, sass/_news.scss */
+#newsFilters, #news {
+  width: 920px;
+  margin: 0 auto 15px;
+}
+/* line 7, sass/_news.scss */
+#newsFilters a, #news a {
+  text-decoration: none;
+  color: #000000;
+}
+/* line 10, sass/_news.scss */
+#newsFilters a:hover, #news a:hover {
+  color: #83A94E;
+}
+
+/* line 15, sass/_news.scss */
+#newsFilters li {
+  font-size: 0.938em;
+  display: inline-block;
+  margin-right: 20px;
+}
+/* line 19, sass/_news.scss */
+#newsFilters li:last-child {
+  margin-right: 0;
+}
+
+/* line 26, sass/_news.scss */
+#news h2 {
+  font-size: 1.125em;
+  font-weight: 300;
+}
+
+/* line 36, sass/_news.scss */
+.datecat li {
+  display: inline-block;
+  font-size: 0.750em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 41, sass/_news.scss */
+.datecat li:after {
+  content: "|";
+  display: inline-block;
+  margin-left: 4px;
+}
+/* line 46, sass/_news.scss */
+.datecat li:last-child:after {
+  content: "";
+}
+
+/* line 51, sass/_news.scss */
+#newsfeed {
+  float: left;
+}
+/* line 54, sass/_news.scss */
+#newsfeed .post {
+  border-bottom: 1px solid #000000;
+  padding: 15px 0;
+}
+/* line 57, sass/_news.scss */
+#newsfeed .post:first-child {
+  border-top: 1px solid #000000;
+}
+/* line 60, sass/_news.scss */
+#newsfeed .pages ul {
+  float: right;
+  margin-top: 10px;
+}
+/* line 61, sass/_news.scss */
+#newsfeed .pages li {
+  display: inline-block;
+}
+/* line 62, sass/_news.scss */
+#newsfeed .pages li, #newsfeed .pages a:hover {
+  color: #83A94E;
+}
+/* line 63, sass/_news.scss */
+#newsfeed .pages a {
+  color: #666666;
+}
+
+/* line 67, sass/_news.scss */
+#singlePost {
+  float: right;
+  margin-bottom: 50px;
+  transition: height 0.25s;
+}
+/* line 71, sass/_news.scss */
+#singlePost img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 19px;
+}
+/* line 72, sass/_news.scss */
+#singlePost ul.datecat {
+  margin-bottom: 10px;
+}
+/* line 73, sass/_news.scss */
+#singlePost h2 {
+  font-weight: 500;
+}
+/* line 74, sass/_news.scss */
+#singlePost p {
+  margin-bottom: 1em;
+}
+/* line 75, sass/_news.scss */
+#singlePost .postContent {
+  font-size: 0.938em;
+  line-height: 1.4em;
+}
+
+/* CONTACT */
+/* line 2, sass/_contact.scss */
+#contact {
+  background-color: #F0F0F0;
+  min-height: calc(100vh - 190px);
+}
+/* line 7, sass/_contact.scss */
+#contact .contentWrapper {
+  width: 100%;
+  margin: auto;
+}
+/* line 12, sass/_contact.scss */
+#contact .column, #contact .team {
+  width: 49%;
+}
+
+/* line 15, sass/_contact.scss */
+#contactContent {
+  padding: 30px 0;
+  float: right;
+}
+/* line 20, sass/_contact.scss */
+#contactContent h3 {
+  font-size: 0.938em;
+  font-weight: 800;
+}
+/* line 24, sass/_contact.scss */
+#contactContent p {
+  font-size: 0.938em;
+  margin-bottom: 1em;
+  line-height: 1.4em;
+}
+/* line 28, sass/_contact.scss */
+#contactContent p.copyright {
+  font-size: 0.750em;
+}
+/* line 30, sass/_contact.scss */
+#contactContent a {
+  color: #000000;
+}
+/* line 32, sass/_contact.scss */
+#contactContent a:hover {
+  color: #83A94E;
+}
+/* line 35, sass/_contact.scss */
+#contactContent .contactContentContainer {
+  width: 445px;
+}
+
+/* line 38, sass/_contact.scss */
+#map {
+  float: left;
+}
+
+/* line 40, sass/_contact.scss */
+#mobileMap {
+  display: none;
+}
+/* line 41, sass/_contact.scss */
+#mobileMap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 49, sass/_contact.scss */
+#map-canvas {
+  width: 100%;
+  min-height: calc(100vh - 190px);
+}
+
+@media screen and (max-width: 1170px) {
+  /* line 14, sass/_responsive.scss */
+  header #headerWrapper, header .sublogos {
+    width: 100%;
+  }
+  /* line 15, sass/_responsive.scss */
+  header h1 {
+    width: 9%;
+  }
+  /* line 17, sass/_responsive.scss */
+  header nav ul {
+    width: 46%;
+  }
+  /* line 18, sass/_responsive.scss */
+  header nav li {
+    font-size: 1em;
+  }
+  /* line 20, sass/_responsive.scss */
+  header .sublogos p {
+    width: 41%;
+  }
+
+  /* line 23, sass/_responsive.scss */
+  #homepage_slideshow .slide .slide_caption, #inspiration .slide .slide_caption {
+    left: 10%;
+  }
+}
+@media screen and (max-width: 950px) {
+  /* line 31, sass/_responsive.scss */
+  header nav:not(.subnav) li {
+    font-size: 0.875em;
+  }
+
+  /* line 33, sass/_responsive.scss */
+  #contentWrapper {
+    padding-bottom: 0;
+  }
+
+  /* line 35, sass/_responsive.scss */
+  footer {
+    height: auto;
+    padding: 10px 0;
+    position: static;
+  }
+  /* line 39, sass/_responsive.scss */
+  footer:after {
+    content: " ";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+  /* line 45, sass/_responsive.scss */
+  footer ul:not(.social), footer ul.footernav {
+    width: 33%;
+    float: left;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  /* line 46, sass/_responsive.scss */
+  footer ul:not(.social), footer ul:not(.social) li, footer ul.footernav, footer ul.footernav li {
+    display: block;
+  }
+  /* line 51, sass/_responsive.scss */
+  footer ul:not(.social) li, footer ul.footernav li {
+    border: 0;
+    line-height: 1.2em;
+    text-align: left;
+    height: auto;
+  }
+  /* line 58, sass/_responsive.scss */
+  footer ul.social {
+    padding-bottom: 1em;
+    padding-top: 24px;
+    width: 33%;
+    float: left;
+  }
+  /* line 63, sass/_responsive.scss */
+  footer ul.social li {
+    margin-right: 5px;
+  }
+  /* line 65, sass/_responsive.scss */
+  footer ul.social li:last-child {
+    margin-right: 0;
+  }
+  /* line 69, sass/_responsive.scss */
+  footer a {
+    display: block;
+  }
+
+  /* line 73, sass/_responsive.scss */
+  .childPages section {
+    width: 90%;
+  }
+  /* line 75, sass/_responsive.scss */
+  .childPages section .sectionImage, .childPages section .sectionContent {
+    width: 48%;
+  }
+  /* line 77, sass/_responsive.scss */
+  .childPages section .sectionImage img, .childPages section .sectionContent img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 86, sass/_responsive.scss */
+  #projectCopy, #news, #newsFilters, #contact .contentWrapper, #toplevelContent {
+    width: 90%;
+  }
+
+  /* line 90, sass/_responsive.scss */
+  .column, .team,
+  #contact .column,
+  #contact .team {
+    width: 48%;
+  }
+
+  /* line 92, sass/_responsive.scss */
+  #contactContent .contactContentContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 100, sass/_responsive.scss */
+  header {
+    height: 108px;
+    padding: 0;
+  }
+  /* line 103, sass/_responsive.scss */
+  header h1 {
+    width: 95px;
+    height: 108px;
+    background-position: center;
+    float: left;
+    margin: 0px 10px;
+  }
+  /* line 111, sass/_responsive.scss */
+  header nav, header nav:not(.subnav), header.homepage nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 108px;
+    padding: 10px 0;
+    right: -100%;
+    transition: right 0.25s;
+  }
+  /* line 118, sass/_responsive.scss */
+  header nav ul, header nav ul:first-child, header nav ul:last-child, header nav:not(.subnav) ul, header nav:not(.subnav) ul:first-child, header nav:not(.subnav) ul:last-child, header.homepage nav ul, header.homepage nav ul:first-child, header.homepage nav ul:last-child {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+  /* line 124, sass/_responsive.scss */
+  header nav li, header nav:not(.subnav) li, header.homepage nav li {
+    display: block;
+    border: 0;
+    font-size: 1em;
+  }
+  /* line 128, sass/_responsive.scss */
+  header nav li a, header nav:not(.subnav) li a, header.homepage nav li a {
+    display: block;
+    padding: 0.5em 18px;
+  }
+  /* line 135, sass/_responsive.scss */
+  header nav.subnav {
+    display: none;
+  }
+  /* line 137, sass/_responsive.scss */
+  header #menuToggle:checked ~ nav {
+    right: 0;
+  }
+  /* line 138, sass/_responsive.scss */
+  header label.hamburger {
+    display: block;
+    width: 50px;
+    height: 108px;
+    float: right;
+    color: #666666;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  /* line 146, sass/_responsive.scss */
+  header label.hamburger:after {
+    content: "M";
+    display: inline-block;
+    padding-top: 39px;
+  }
+  /* line 151, sass/_responsive.scss */
+  header label.hamburger span {
+    display: block;
+    position: absolute;
+    text-indent: -999999px;
+  }
+  /* line 159, sass/_responsive.scss */
+  header .sublogos {
+    position: static;
+    width: calc(100% - 165px);
+    float: left;
+    padding-top: 39px;
+  }
+  /* line 164, sass/_responsive.scss */
+  header .sublogos p {
+    width: 50%;
+    height: 21px;
+  }
+  /* line 165, sass/_responsive.scss */
+  header .sublogos p.architecture, header .sublogos p.interiors {
+    background-position: center;
+  }
+
+  /* line 171, sass/_responsive.scss */
+  #contentWrapper {
+    margin-top: 108px;
+  }
+
+  /* line 176, sass/_responsive.scss */
+  footer ul:not(.social), footer ul.social {
+    width: 100%;
+    float: none;
+  }
+  /* line 180, sass/_responsive.scss */
+  footer ul {
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 1em;
+  }
+  /* line 183, sass/_responsive.scss */
+  footer ul:last-child {
+    border: 0;
+  }
+
+  /* line 187, sass/_responsive.scss */
+  #homepage_slideshow, #inspiration {
+    height: calc(100vh - 108px) !important;
+  }
+  /* line 189, sass/_responsive.scss */
+  #homepage_slideshow img, #inspiration img {
+    min-height: calc(100vh - 108px);
+    width: auto !important;
+  }
+  /* line 193, sass/_responsive.scss */
+  #homepage_slideshow .slide, #inspiration .slide {
+    height: calc(100vh - 108px) !important;
+  }
+  /* line 195, sass/_responsive.scss */
+  #homepage_slideshow .slide .slide_caption, #inspiration .slide .slide_caption {
+    width: 96%;
+    left: 2%;
+    top: 60%;
+    text-align: center;
+  }
+  /* line 202, sass/_responsive.scss */
+  #homepage_slideshow .slide h2, #inspiration .slide h2 {
+    font-size: 1.68em;
+  }
+  /* line 203, sass/_responsive.scss */
+  #homepage_slideshow .slide p.caption, #inspiration .slide p.caption {
+    font-size: 1.125em;
+  }
+  /* line 204, sass/_responsive.scss */
+  #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline {
+    font-size: 0.844em;
+  }
+  /* line 205, sass/_responsive.scss */
+  #homepage_slideshow .slide p.caption, #inspiration .slide p.caption, #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline {
+    margin-left: 0;
+  }
+
+  /* line 211, sass/_responsive.scss */
+  .column, .team,
+  .childPages section .sectionImage,
+  .childPages section .sectionContent,
+  #newsfeed,
+  #singlePost,
+  #contact .column,
+  #contact .team {
+    width: 100%;
+    float: none;
+  }
+  /* line 220, sass/_responsive.scss */
+  .column img, .team img,
+  .childPages section .sectionImage img,
+  .childPages section .sectionContent img,
+  #newsfeed img,
+  #singlePost img,
+  #contact .column img,
+  #contact .team img {
+    width: 50%;
+    height: auto;
+    margin: 0px auto 1em auto;
+  }
+
+  /* line 224, sass/_responsive.scss */
+  .team img {
+    width: auto;
+    margin: 0 0 1em 0;
+  }
+
+  /* line 230, sass/_responsive.scss */
+  #singlePost img {
+    width: 100%;
+  }
+
+  /* line 232, sass/_responsive.scss */
+  #newsfeed h2 {
+    font-size: 1em;
+  }
+  /* line 233, sass/_responsive.scss */
+  #newsfeed li {
+    font-size: 0.625em;
+  }
+
+  /* line 235, sass/_responsive.scss */
+  #projectGallery .slideshowCaption {
+    display: none;
+  }
+
+  /* line 239, sass/_responsive.scss */
+  #inspiration .cards {
+    height: auto !important;
+  }
+  /* line 240, sass/_responsive.scss */
+  #inspiration .card {
+    width: 100%;
+    margin-right: 0;
+  }
+  /* line 241, sass/_responsive.scss */
+  #inspiration .card.tiled {
+    position: static;
+  }
+
+  /* line 246, sass/_responsive.scss */
+  #contact {
+    min-height: 0;
+    padding-bottom: 108px;
+  }
+
+  /* line 247, sass/_responsive.scss */
+  #map {
+    display: none;
+  }
+
+  /* line 251, sass/_responsive.scss */
+  #mobileMap {
+    display: block;
+  }
+
+  /* line 254, sass/_responsive.scss */
+  #projectGallery .slideshowControls li, #inspiration .slideshowControls li, #projectGallery .slideshowControls p, #inspiration .slideshowControls p, #projectGallery .slideshowControls button, #inspiration .slideshowControls button {
+    top: 43%;
+  }
+  /* line 255, sass/_responsive.scss */
+  #projectGallery .slideshowControls p.next, #inspiration .slideshowControls p.next {
+    right: 42px;
+  }
+  /* line 256, sass/_responsive.scss */
+  #projectGallery .slideshowControls button, #inspiration .slideshowControls button {
+    display: none;
+  }
+
+  /* line 259, sass/_responsive.scss */
+  #inspiration li, #inspiration p, #inspiration button {
+    display: none;
+  }
+
+  /* line 263, sass/_responsive.scss */
+  #realEstate .projects {
+    padding-bottom: 0;
+  }
+  /* line 264, sass/_responsive.scss */
+  #realEstate .pageCopy {
+    position: static;
+  }
+}
+@media screen and (max-width: 479px) {
+  /* line 270, sass/_responsive.scss */
+  header .sublogos {
+    padding-top: 20px;
+  }
+  /* line 272, sass/_responsive.scss */
+  header .sublogos p {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  /* line 273, sass/_responsive.scss */
+  header .sublogos p, header .sublogos p:last-child {
+    float: none;
+  }
+
+  /* line 284, sass/_responsive.scss */
+  .column img, .team img,
+  .childPages section .sectionImage img,
+  .childPages section .sectionContent img,
+  #newsfeed img,
+  #singlePost img {
+    width: 100%;
+  }
+
+  /* line 286, sass/_responsive.scss */
+  .childPages .sectionQuote {
+    width: 85%;
+    margin: auto;
+  }
+  /* line 288, sass/_responsive.scss */
+  .childPages .sectionQuote p.quote {
+    font-size: 1.2em;
+  }
+
+  /* line 291, sass/_responsive.scss */
+  .team img {
+    width: auto;
+  }
+
+  /* line 294, sass/_responsive.scss */
+  #portfolio .projects .project, #realEstate .projects .project {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    height: auto;
+  }
+  /* line 299, sass/_responsive.scss */
+  #portfolio .projects .project .blurb, #realEstate .projects .project .blurb {
+    padding: 10px 23px;
+  }
+}
+/* line 92, sass/main.scss */
+p.editpost {
+  clear: both;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 96, sass/main.scss */
+p.editpost a {
+  display: block;
+  padding: 5px;
+  background-color: #83A94E;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+/* line 103, sass/main.scss */
+p.editpost a:hover {
+  color: #FFFFFF;
+  background-color: #333333;
+}
+
+/* line 110, sass/main.scss */
+#feedback {
+  position: fixed;
+  z-index: 999999;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(77, 99, 46, 0.9);
+  font-size: 11px;
+  color: #FFFFFF;
+  padding: 5px;
+  opacity: 0;
+}
