@@ -4,30 +4,30 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <link rel="shortcut icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/icon.ico" />
-<title><?php 
-  if (is_front_page()) { 
+<title><?php
+  if (is_front_page()) {
     echo get_bloginfo('name');
     if (get_bloginfo('description')!="") { echo " | ".get_bloginfo('description'); }
   } else {
     wp_title ( ' | ', true,'right' );
     echo get_bloginfo('name');
   } ?></title>
-<?php 
+<?php
 wp_head();
 $template =  end(explode('/',get_page_template()));
 ?>
 </head>
 <body>
 <header<?php if(
-  is_front_page() || 
-  is_page_template('template_homepage.php') || 
+  is_front_page() ||
+  is_page_template('template_homepage.php') ||
   is_page_template('template_contact.php')
   ) { echo ' class="homepage"'; } ?>>
   <div id="headerWrapper">
     <h1><a href="<?php echo get_option('home'); ?>">Carol Kurth Architecture</a></h1>
 <?php if(
-  is_front_page() || 
-  is_page_template('template_homepage.php') || 
+  is_front_page() ||
+  is_page_template('template_homepage.php') ||
   is_page_template('template_contact.php')
   ) { ?>
     <div class="sublogos">
@@ -69,11 +69,11 @@ $template =  end(explode('/',get_page_template()));
 <?php } ?>
       </ul>
 <?php } ?>
-    </nav>  
+    </nav>
 <?php
 
   /*** PORFOLIO PAGE NAVIGATION ***/
-  } else if ($template == 'template_portfolio.php' || 
+  } else if ($template == 'template_portfolio.php' ||
              is_singular( 'portfolio' ) ||
              is_tax('filter')) {
     $filters = get_terms( 'filter' );
@@ -84,7 +84,7 @@ $template =  end(explode('/',get_page_template()));
         "link" => get_term_link($filter->name, 'filter')
       );
     }
-   
+
    //$menu[] = array(
    //  "name" => "View All",
    //   "link" =>  get_permalink(9)
@@ -104,21 +104,21 @@ $template =  end(explode('/',get_page_template()));
 <?php
 
   /*** LIFESTYLE PAGE NAVIGATION ***/
-  } else if ($template == 'template_lifestyle.php' || 
+  } else if ($template == 'template_lifestyle.php' ||
              is_singular( 'lifestyle' ) ||
-             is_tax('lifestyle_filter')) {
-    $filters = get_terms( 'lifestyle_filter' );
+             is_tax('product_filter')) {
+    $filters = get_terms( 'product_filter' );
     $menu = array();
 	$menulength = 0;
-	
+
     foreach($filters as $filter) {
       $menu[] = array(
         "name" => $filter->name,
-        "link" => get_term_link($filter->name, 'lifestyle_filter'),
+        "link" => get_term_link($filter->name, 'product_filter'),
       );
 	  $menulength += strlen($filter->name);
     }
-   
+
    $ls_links = get_field('lifestyle_links',1645);
    foreach($ls_links as $l) {
      $menu[] = array(

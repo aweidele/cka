@@ -55,5 +55,5 @@ if ( isset( $_GET[ 'v' ] ) && $_GET[ 'v' ] == 'list' ) {
     </div>
   </section> <?php
 }
-?> 
+?>
 <?php get_footer();?>
