@@ -1,6 +1,6 @@
 <?php
 
-
+/* Hello! */
 /*** ADD SCRIPTS AND STYLES ***/
 function cka_scripts() {
   // styles
@@ -8,7 +8,7 @@ function cka_scripts() {
   wp_enqueue_style( 'main-style', get_template_directory_uri() . '/main.css' );
   wp_enqueue_style( 'override-style', get_template_directory_uri() . '/override.css' );
   //wp_enqueue_style( 'main-style', get_stylesheet_uri() );
-  
+
   // scripts
   wp_enqueue_script( 'main-script', get_template_directory_uri() . '/inc/script.js', array('jquery'), '1.0.0', true );
 }
@@ -34,9 +34,9 @@ add_image_size('Staff Photo',140,160,true);
 
 /*** CUSTOM POST TYPES ***/
 add_action('init', 'cka_register');
- 
+
 function cka_register() {
- 
+
 	/*** Portfolio ***/
 	$labels = array(
 		'name' => _x('Portfolio', 'post type general name'),
@@ -51,7 +51,7 @@ function cka_register() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -65,10 +65,10 @@ function cka_register() {
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
 		//"menu_position" => 21
-	  ); 
- 
+	  );
+
 	register_post_type( 'portfolio' , $args );
- 
+
 	/*** Lifestyle ***/
 	$labels = array(
 		'name' => _x('Lifestyle', 'post type general name'),
@@ -83,7 +83,7 @@ function cka_register() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -97,10 +97,10 @@ function cka_register() {
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
 		//"menu_position" => 21
-	  ); 
- 
+	  );
+
 	register_post_type( 'lifestyle' , $args );
- 
+
 	/*** Awards ***/
 	$labels = array(
 		'name' => _x('Awards', 'post type general name'),
@@ -115,7 +115,7 @@ function cka_register() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -129,10 +129,10 @@ function cka_register() {
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
 		//"menu_position" => 21
-	  ); 
- 
+	  );
+
 	register_post_type( 'awards' , $args );
- 
+
 	/*** Real Estate ***/
 	$labels = array(
 		'name' => _x('Real Estate', 'post type general name'),
@@ -147,7 +147,7 @@ function cka_register() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -161,10 +161,10 @@ function cka_register() {
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
 		//"menu_position" => 21
-	  ); 
- 
+	  );
+
 	register_post_type( 'realestate' , $args );
-	
+
 	/*** Our Team ***/
 	$labels = array(
 		'name' => _x('Our Team', 'post type general name'),
@@ -179,7 +179,7 @@ function cka_register() {
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
 	);
- 
+
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
@@ -193,10 +193,10 @@ function cka_register() {
 		'menu_position' => null,
 		'supports' => array('title','editor','thumbnail','excerpt'),
 		//"menu_position" => 21
-	  ); 
- 
+	  );
+
 	register_post_type( 'team' , $args );
-	
+
 	flush_rewrite_rules();
 }
 
@@ -257,7 +257,7 @@ function create_taxonomies() {
             'support' => array('tags')
         )
     );
-   
+
     // Add Awards Year Taxonomy
     register_taxonomy(
         'awardyear',
@@ -276,7 +276,7 @@ function create_taxonomies() {
             'support' => array('tags')
         )
     );
-   
+
     // Add Real Estate Location Taxonomy
     register_taxonomy(
         'relocation',
@@ -297,43 +297,43 @@ function create_taxonomies() {
     ); /*
 	flush_rewrite_rules();
 	*/
-    
+
 }
 
 /**** REORDER ADMIN MENU ITEMS ***  */
-    function custom_menu_order($menu_ord) {  
-        if (!$menu_ord) return true;  
-          
-        return array(  
-            'index.php', // Dashboard  
-            'separator1', // First separator  
-            'upload.php', // Media  
-            'edit.php?post_type=page', // Pages 
-            'edit.php?post_type=team', // Team 
-            'edit.php?post_type=awards', // Awards 
-            'edit.php?post_type=portfolio', // Portfolio 
-            'edit.php?post_type=lifestyle', // Lifestyle 
-            'edit.php', // Posts  
-            'edit.php?post_type=realestate', // Real Estate 
-            //'link-manager.php', // Links  
-            'separator2', // First separator 
-            //'edit-comments.php', // Comments  
-            'separator-last', // Last separator  
-            'themes.php', // Appearance  
-            'plugins.php', // Plugins  
-            'users.php', // Users  
-            'tools.php', // Tools  
-            'options-general.php', // Settings  
-        );  
-    }  
-    add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order  
+    function custom_menu_order($menu_ord) {
+        if (!$menu_ord) return true;
+
+        return array(
+            'index.php', // Dashboard
+            'separator1', // First separator
+            'upload.php', // Media
+            'edit.php?post_type=page', // Pages
+            'edit.php?post_type=team', // Team
+            'edit.php?post_type=awards', // Awards
+            'edit.php?post_type=portfolio', // Portfolio
+            'edit.php?post_type=lifestyle', // Lifestyle
+            'edit.php', // Posts
+            'edit.php?post_type=realestate', // Real Estate
+            //'link-manager.php', // Links
+            'separator2', // First separator
+            //'edit-comments.php', // Comments
+            'separator-last', // Last separator
+            'themes.php', // Appearance
+            'plugins.php', // Plugins
+            'users.php', // Users
+            'tools.php', // Tools
+            'options-general.php', // Settings
+        );
+    }
+    add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
     add_filter('menu_order', 'custom_menu_order');
 
-    function edit_admin_menus() {  
-        global $menu; 
-        $menu[5][0] = 'News'; // Change Posts to The Ladder   
-    }  
-    add_action( 'admin_menu', 'edit_admin_menus' );  
+    function edit_admin_menus() {
+        global $menu;
+        $menu[5][0] = 'News'; // Change Posts to The Ladder
+    }
+    add_action( 'admin_menu', 'edit_admin_menus' );
 
 
 /*** SHORTCODES ***/
@@ -348,7 +348,7 @@ function awards_shortcode( $atts, $content = null ) {
   $y = shortcode_atts( array(
     'year'  => '2015'
     ) , $atts);
-  
+
   $year = $y['year'];
   $msg = "<h3>".$year."</h3>\n";
   foreach($awards[$year] as $award) {
