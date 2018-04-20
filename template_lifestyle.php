@@ -1,14 +1,12 @@
 <?php /* Template Name: Lifestyle */ ?>
 
-<pre>
 <?php
 $filters = get_terms( 'product_filter' );
-// $redirect = get_term_link($filters[0]);
-// header("Location: ".$redirect)
+$redirect = get_term_link($filters[0]);
+header("Location: ".$redirect)
 print_r($filters);
 //print_r($redirect);
 ?>
-</pre>
 <?php /*
  <?php get_header(); ?>
   <section id="portfolio">
