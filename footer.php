@@ -1,6 +1,5 @@
 
-
-</div><!-- #contentWrapper -->
+</main><!-- #contentWrapper -->
 <?php
 $locations = get_nav_menu_locations();
 $footerMenu = wp_get_nav_menu_items($locations['footer-menu']);

@@ -101,8 +101,47 @@ $template =  end(explode('/',get_page_template()));
       </ul>
 <?php } ?>
     </nav>
+<?php
+
+  /*** LIFESTYLE PAGE NAVIGATION ***/
+  } else if ($template == 'template_lifestyle.php' || 
+             is_singular( 'lifestyle' ) ||
+             is_tax('lifestyle_filter')) {
+    $filters = get_terms( 'lifestyle_filter' );
+    $menu = array();
+	$menulength = 0;
+	
+    foreach($filters as $filter) {
+      $menu[] = array(
+        "name" => $filter->name,
+        "link" => get_term_link($filter->name, 'lifestyle_filter'),
+      );
+	  $menulength += strlen($filter->name);
+    }
+   
+   $ls_links = get_field('lifestyle_links',1645);
+   foreach($ls_links as $l) {
+     $menu[] = array(
+       "name" => $l['link_label'],
+  	   "link" => $l['link_url'],
+	   "target" => "_blank"
+      );
+	  $menulength += strlen($l['link_label']);
+   }
+   $splitMenu = array_chunk($menu, ceil(sizeof($menu) / 2), true);
+
+?>
+    <nav class="subnav<?php if (!is_singular( 'lifestyle' )) { echo " filter"; } ?>">
+<?php foreach($splitMenu as $menu) { ?>
+      <ul>
+<?php foreach($menu as $menuItem) { ?>
+        <li><a href="<?php echo $menuItem['link']; ?>"<?php if(isset($menuItem["target"]) && $menuItem["target"] != "") { echo ' target="'.$menuItem["target"].'"'; } ?>><?php echo $menuItem['name']; ?></a></li>
+<?php } ?>
+      </ul>
+<?php } ?>
+    </nav>
 
 <?php } // end if ?>
   </div>
 </header>
-<div id="contentWrapper">
+<main id="contentWrapper">

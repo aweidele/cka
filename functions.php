@@ -5,7 +5,9 @@
 function cka_scripts() {
   // styles
   wp_enqueue_style( 'font-style', '//fast.fonts.net/cssapi/71138be6-38c0-4939-b911-a168745b6726.css');
-  wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'main-style', get_template_directory_uri() . '/main.css' );
+  wp_enqueue_style( 'override-style', get_template_directory_uri() . '/override.css' );
+  //wp_enqueue_style( 'main-style', get_stylesheet_uri() );
   
   // scripts
   wp_enqueue_script( 'main-script', get_template_directory_uri() . '/inc/script.js', array('jquery'), '1.0.0', true );
@@ -66,6 +68,38 @@ function cka_register() {
 	  ); 
  
 	register_post_type( 'portfolio' , $args );
+ 
+	/*** Lifestyle ***/
+	$labels = array(
+		'name' => _x('Lifestyle', 'post type general name'),
+		'singular_name' => _x('Lifestyle', 'post type singular name'),
+		'add_new' => _x('Add New Lifestyle', 'portfolio item'),
+		'add_new_item' => __('Add New Lifestyle'),
+		'edit_item' => __('Edit Lifestyle'),
+		'new_item' => __('New Lifestyle'),
+		'view_item' => __('View Lifestyle'),
+		'search_items' => __('Search Lifestyle'),
+		'not_found' =>  __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+ 
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/images/portfolio.svg',
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail','excerpt'),
+		//"menu_position" => 21
+	  ); 
+ 
+	register_post_type( 'lifestyle' , $args );
  
 	/*** Awards ***/
 	$labels = array(
@@ -187,6 +221,24 @@ function create_taxonomies() {
             'support' => array('tags')
         )
     );
+    // Add Lifestyle Filter Taxonomy
+    register_taxonomy(
+        'lifestyle_filter',
+        'lifestyle',
+        array(
+            'labels' => array(
+                'name'              => _x( 'Lifestyle Filters' , 'taxonomy general name' ),
+                'singular_name'     => _x( 'Lifestyle Filter' , 'taxonomy singular name'),
+                'add_new_item' => 'Add Filter',
+                'new_item_name' => "New Filter"
+            ),
+            'show_ui' => true,
+            'show_admin_column' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true,
+            'support' => array('tags')
+        )
+    );
     // Add News Filter Taxonomy
     register_taxonomy(
         'heading',
@@ -260,6 +312,7 @@ function create_taxonomies() {
             'edit.php?post_type=team', // Team 
             'edit.php?post_type=awards', // Awards 
             'edit.php?post_type=portfolio', // Portfolio 
+            'edit.php?post_type=lifestyle', // Lifestyle 
             'edit.php', // Posts  
             'edit.php?post_type=realestate', // Real Estate 
             //'link-manager.php', // Links  

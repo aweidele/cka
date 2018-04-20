@@ -47,7 +47,7 @@ a {
   font-style: normal;
 }
 /* line 47, sass/main.scss */
-.av, header nav.subnav li, footer, #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline, .childPages section, .childPages h3, .childPages#product h2, #portfolio .project p, #realEstate .project p, #projectGallery .slideshowControls li, #inspiration .slideshowControls li, #projectGallery .slideshowControls p, #inspiration .slideshowControls p, #projectGallery .slideshowControls button, #inspiration .slideshowControls button, #projectGallery .slideshowCaption h3, #projectCopy, #realEstate .project h3, #realEstate .pageCopy, #newsFilters, #news, #contactContent, #feedback {
+.av, header nav.subnav li, footer, #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline, .childPages section, .childPages h3, .childPages#product h2, #portfolio .project p, #realEstate .project p, #projectGallery .slideshowControls li, #inspiration .slideshowControls li, #projectGallery .slideshowControls p, #inspiration .slideshowControls p, #projectGallery .slideshowControls button, #inspiration .slideshowControls button, #projectGallery .slideshowCaption h3, .lifestyleCaption p, #projectCopy, #realEstate .project h3, #realEstate .pageCopy, #newsFilters, #news, #contactContent, #feedback {
   font-family: 'Avenir W01','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
@@ -58,7 +58,7 @@ a {
 }
 
 /* line 49, sass/main.scss */
-.sg, header nav:not(.subnav) li, footer ul.footernav li, #homepage_slideshow .slide h2, #inspiration .slide h2, #homepage_slideshow .slide p.caption, #inspiration .slide p.caption, .headers, #toplevelContent, .childPages .sectionQuote p.quote, .childPages h2, #contactContent h2, #portfolio .project h2, #realEstate .project h2, #projectGallery .slideshowCaption h2, #projectCopy h2 {
+.sg, header nav:not(.subnav) li, footer ul.footernav li, #homepage_slideshow .slide h2, #inspiration .slide h2, #homepage_slideshow .slide p.caption, #inspiration .slide p.caption, .headers, #toplevelContent, .childPages .sectionQuote p.quote, .childPages h2, #contactContent h2, #portfolio .project h2, #realEstate .project h2, #projectGallery .slideshowCaption h2, .lifestyleCaption h2, .lifestyleCaption .view, #projectCopy h2 {
   font-family: 'Sackers Gothic W01','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
@@ -331,16 +331,17 @@ footer ul.footernav li {
   top: 0px;
   left: 0px;
   width: 100%;
+  height: 100%;
   z-index: 0;
   opacity: 0;
   transition: opacity 0.5s;
 }
-/* line 16, sass/_homepage.scss */
+/* line 17, sass/_homepage.scss */
 #homepage_slideshow .slide.active, #inspiration .slide.active {
   opacity: 1;
   z-index: 100;
 }
-/* line 18, sass/_homepage.scss */
+/* line 19, sass/_homepage.scss */
 #homepage_slideshow .slide img, #inspiration .slide img {
   display: block;
   height: auto;
@@ -348,8 +349,16 @@ footer ul.footernav li {
   top: 0px;
   left: 0px;
   z-index: 10;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-/* line 27, sass/_homepage.scss */
+/* line 33, sass/_homepage.scss */
 #homepage_slideshow .slide .slide_caption, #inspiration .slide .slide_caption {
   position: absolute;
   top: 69%;
@@ -357,18 +366,18 @@ footer ul.footernav li {
   color: #FFFFFF;
   z-index: 50;
 }
-/* line 35, sass/_homepage.scss */
+/* line 41, sass/_homepage.scss */
 #homepage_slideshow .slide h2, #inspiration .slide h2 {
   font-size: 2.250em;
   text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 1px;
 }
-/* line 41, sass/_homepage.scss */
+/* line 47, sass/_homepage.scss */
 #homepage_slideshow .slide h2 strong, #inspiration .slide h2 strong {
   font-weight: 800;
 }
-/* line 44, sass/_homepage.scss */
+/* line 50, sass/_homepage.scss */
 #homepage_slideshow .slide p.caption, #inspiration .slide p.caption {
   font-size: 1.500em;
   font-weight: 500;
@@ -377,14 +386,14 @@ footer ul.footernav li {
   letter-spacing: 1px;
   margin-left: 117px;
 }
-/* line 54, sass/_homepage.scss */
+/* line 60, sass/_homepage.scss */
 #homepage_slideshow .slide p.tagline, #inspiration .slide p.tagline {
   font-size: 1.125em;
   font-weight: 300;
   margin-left: 62px;
   letter-spacing: 1px;
 }
-/* line 60, sass/_homepage.scss */
+/* line 66, sass/_homepage.scss */
 #homepage_slideshow .slide p.tagline:after, #inspiration .slide p.tagline:after {
   content: " ";
 }
@@ -899,25 +908,95 @@ p.award a:hover {
 }
 
 /* line 244, sass/_portfolio.scss */
+.lifestyleCaption {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  z-index: 200;
+}
+/* line 252, sass/_portfolio.scss */
+.lifestyleCaption > div {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 1170px) {
+  /* line 252, sass/_portfolio.scss */
+  .lifestyleCaption > div {
+    width: 1170px;
+  }
+}
+/* line 259, sass/_portfolio.scss */
+.lifestyleCaption > div > div {
+  background-color: rgba(51, 51, 51, 0.75);
+  color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 24px;
+}
+@media screen and (min-width: 750px) {
+  /* line 259, sass/_portfolio.scss */
+  .lifestyleCaption > div > div {
+    width: 50%;
+    float: right;
+  }
+}
+@media screen and (max-width: 750px) and (max-height: 800px) {
+  /* line 259, sass/_portfolio.scss */
+  .lifestyleCaption > div > div {
+    font-size: 10px;
+  }
+}
+/* line 275, sass/_portfolio.scss */
+.lifestyleCaption h2 {
+  font-weight: 500;
+  font-size: 2.250em;
+  line-height: 1em;
+  text-transform: lowercase;
+  padding-bottom: 10px;
+}
+/* line 284, sass/_portfolio.scss */
+.lifestyleCaption p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding-top: 10px;
+  font-weight: 200;
+}
+/* line 291, sass/_portfolio.scss */
+.lifestyleCaption p + .view {
+  margin-top: 2em;
+}
+/* line 296, sass/_portfolio.scss */
+.lifestyleCaption .view {
+  text-transform: lowercase;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+}
+
+/* line 310, sass/_portfolio.scss */
 #projectCopy h3, .related_projects h3 {
   font-size: 0.938em;
   font-weight: 800;
   color: #83A94E;
 }
 
-/* line 249, sass/_portfolio.scss */
+/* line 315, sass/_portfolio.scss */
 #projectCopy p, .related_projects li {
   font-size: 0.938em;
   margin-bottom: 1em;
 }
 
-/* line 254, sass/_portfolio.scss */
+/* line 320, sass/_portfolio.scss */
 #projectCopy {
   line-height: 1.4em;
   width: 920px;
   margin: 30px auto;
 }
-/* line 260, sass/_portfolio.scss */
+/* line 326, sass/_portfolio.scss */
 #projectCopy h2 {
   font-weight: 800;
   font-size: 1em;
@@ -925,65 +1004,65 @@ p.award a:hover {
   color: #83A94E;
   margin-bottom: 0.75em;
 }
-/* line 272, sass/_portfolio.scss */
+/* line 338, sass/_portfolio.scss */
 #projectCopy .sidebar a {
   color: #000000;
   text-decoration: none;
 }
-/* line 275, sass/_portfolio.scss */
+/* line 341, sass/_portfolio.scss */
 #projectCopy .sidebar a:hover {
   color: #83A94E;
 }
-/* line 277, sass/_portfolio.scss */
+/* line 343, sass/_portfolio.scss */
 #projectCopy .sidebar p {
   margin-bottom: 10px;
   line-height: 1.3em;
 }
-/* line 278, sass/_portfolio.scss */
+/* line 344, sass/_portfolio.scss */
 #projectCopy .sidebar div {
   margin-bottom: 1.5em;
 }
 
-/* line 282, sass/_portfolio.scss */
+/* line 348, sass/_portfolio.scss */
 #realEstate {
   position: relative;
 }
-/* line 286, sass/_portfolio.scss */
+/* line 352, sass/_portfolio.scss */
 #realEstate .projects {
   padding-bottom: 130px;
 }
-/* line 287, sass/_portfolio.scss */
+/* line 353, sass/_portfolio.scss */
 #realEstate .project {
   height: 398px;
 }
-/* line 289, sass/_portfolio.scss */
+/* line 355, sass/_portfolio.scss */
 #realEstate .project h3 {
   font-size: 0.938em;
   font-weight: 800;
   color: #83A94E;
 }
-/* line 295, sass/_portfolio.scss */
+/* line 361, sass/_portfolio.scss */
 #realEstate .project p {
   color: #333333;
 }
-/* line 296, sass/_portfolio.scss */
+/* line 362, sass/_portfolio.scss */
 #realEstate .project a {
   color: #83A94E;
 }
-/* line 298, sass/_portfolio.scss */
+/* line 364, sass/_portfolio.scss */
 #realEstate .project a:hover {
   color: #333333;
 }
-/* line 300, sass/_portfolio.scss */
+/* line 366, sass/_portfolio.scss */
 #realEstate .project .blurb {
   padding: 16px 23px 23px 23px;
 }
-/* line 302, sass/_portfolio.scss */
+/* line 368, sass/_portfolio.scss */
 #realEstate .project .photo, #realEstate .project .photo img {
   position: relative;
   z-index: 0;
 }
-/* line 303, sass/_portfolio.scss */
+/* line 369, sass/_portfolio.scss */
 #realEstate .project .photo p.sold {
   color: #FFFFFF;
   font-weight: 800;
@@ -997,7 +1076,7 @@ p.award a:hover {
   padding: 0 13px 0 23px;
   letter-spacing: 1px;
 }
-/* line 318, sass/_portfolio.scss */
+/* line 384, sass/_portfolio.scss */
 #realEstate .pageCopy {
   font-size: 0.875em;
   text-align: center;
@@ -1007,7 +1086,7 @@ p.award a:hover {
   position: absolute;
   bottom: 10px;
 }
-/* line 327, sass/_portfolio.scss */
+/* line 393, sass/_portfolio.scss */
 #realEstate .pageCopy strong {
   font-weight: 800;
 }
@@ -1617,13 +1696,13 @@ p.award a:hover {
     padding: 10px 23px;
   }
 }
-/* line 92, sass/main.scss */
+/* line 98, sass/main.scss */
 p.editpost {
   clear: both;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 96, sass/main.scss */
+/* line 102, sass/main.scss */
 p.editpost a {
   display: block;
   padding: 5px;
@@ -1632,13 +1711,13 @@ p.editpost a {
   text-decoration: none;
   transition: background-color 0.5s;
 }
-/* line 103, sass/main.scss */
+/* line 109, sass/main.scss */
 p.editpost a:hover {
   color: #FFFFFF;
   background-color: #333333;
 }
 
-/* line 110, sass/main.scss */
+/* line 116, sass/main.scss */
 #feedback {
   position: fixed;
   z-index: 999999;
