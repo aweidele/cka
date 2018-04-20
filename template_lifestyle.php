@@ -3,9 +3,11 @@
 <?php
 $filters = get_terms( 'product_filter' );
 $redirect = get_term_link($filters[0]);
-header("Location: ".$redirect)
+//header("Location: ".$redirect)
+echo "<pre>";
 print_r($filters);
-//print_r($redirect);
+print_r($redirect);
+echo "</pre>";
 ?>
 <?php /*
  <?php get_header(); ?>
