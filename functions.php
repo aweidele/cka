@@ -1,6 +1,4 @@
 <?php
-
-/* Hello! */
 /*** ADD SCRIPTS AND STYLES ***/
 function cka_scripts() {
   // styles
@@ -71,14 +69,14 @@ function cka_register() {
 
 	/*** Lifestyle ***/
 	$labels = array(
-		'name' => _x('Lifestyle', 'post type general name'),
-		'singular_name' => _x('Lifestyle', 'post type singular name'),
-		'add_new' => _x('Add New Lifestyle', 'portfolio item'),
-		'add_new_item' => __('Add New Lifestyle'),
-		'edit_item' => __('Edit Lifestyle'),
-		'new_item' => __('New Lifestyle'),
-		'view_item' => __('View Lifestyle'),
-		'search_items' => __('Search Lifestyle'),
+		'name' => _x('Product', 'post type general name'),
+		'singular_name' => _x('Product', 'post type singular name'),
+		'add_new' => _x('Add New Product', 'portfolio item'),
+		'add_new_item' => __('Add New Product'),
+		'edit_item' => __('Edit Product'),
+		'new_item' => __('New Product'),
+		'view_item' => __('View Product'),
+		'search_items' => __('Search Product'),
 		'not_found' =>  __('Nothing found'),
 		'not_found_in_trash' => __('Nothing found in Trash'),
 		'parent_item_colon' => ''
@@ -91,7 +89,8 @@ function cka_register() {
 		'show_ui' => true,
 		'query_var' => true,
 		'menu_icon' => get_stylesheet_directory_uri() . '/images/portfolio.svg',
-		'rewrite' => true,
+    'rewrite' => array(
+      'slug' => 'product'),
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
@@ -223,12 +222,12 @@ function create_taxonomies() {
     );
     // Add Lifestyle Filter Taxonomy
     register_taxonomy(
-        'lifestyle_filter',
+        'product_filter',
         'lifestyle',
         array(
             'labels' => array(
-                'name'              => _x( 'Lifestyle Filters' , 'taxonomy general name' ),
-                'singular_name'     => _x( 'Lifestyle Filter' , 'taxonomy singular name'),
+                'name'              => _x( 'Product Filters' , 'taxonomy general name' ),
+                'singular_name'     => _x( 'Product Filter' , 'taxonomy singular name'),
                 'add_new_item' => 'Add Filter',
                 'new_item_name' => "New Filter"
             ),
