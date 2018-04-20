@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-<pre><?php var_dump($wp_query->query,get_queried_object()); ?></pre>
 <section id="portfolio">
   <div class="projects">
     <?php
