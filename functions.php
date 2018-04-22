@@ -236,7 +236,9 @@ function create_taxonomies() {
             'show_admin_column' => true,
             'show_tagcloud' => false,
             'hierarchical' => true,
-            'support' => array('tags')
+            'support' => array('tags'),
+            'rewrite' => array(
+              'slug' => 'product'),
         )
     );
     // Add News Filter Taxonomy
