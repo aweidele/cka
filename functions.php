@@ -238,7 +238,7 @@ function create_taxonomies() {
             'hierarchical' => true,
             'support' => array('tags'),
             'rewrite' => array(
-              'slug' => 'product'),
+              'slug' => 'product/filter'),
         )
     );
     // Add News Filter Taxonomy
