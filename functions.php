@@ -354,6 +354,15 @@ function create_taxonomies() {
 
 }
 
+/**** ADD OPTIONS PAGE TO POST TYPES ***  */
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+	acf_add_options_sub_page(array(
+		'title'      => 'Art Splash Page',
+		'parent'     => 'edit.php?post_type=art',
+		'capability' => 'manage_options'
+	));
+}
+
 /**** REORDER ADMIN MENU ITEMS ***  */
     function custom_menu_order($menu_ord) {
         if (!$menu_ord) return true;
