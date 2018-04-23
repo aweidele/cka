@@ -333,7 +333,7 @@ function create_taxonomies() {
 
     function edit_admin_menus() {
         global $menu;
-        $menu[5][0] = 'News'; // Change Posts to The Ladder
+        $menu[5][0] = 'Press'; // Change Posts to "Press"
     }
     add_action( 'admin_menu', 'edit_admin_menus' );
 
