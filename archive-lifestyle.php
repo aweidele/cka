@@ -2,7 +2,7 @@
 get_header();
 ?>
 <p>Hello</p>
-<p><?php echo is_post_type_archive( 'lifestyle '); ?></p>
+<p><?php echo get_post_type(); ?></p>
 <p>Hello</p>
 <section id="portfolio">
   <div class="projects">
