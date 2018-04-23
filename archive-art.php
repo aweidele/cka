@@ -32,10 +32,9 @@ if ( isset( $_GET[ 'v' ] ) && $_GET[ 'v' ] == 'list' ) {
     </div>
   </section> <?php
 } else {
-  $filter = get_queried_object();
-  $linkText = get_field( 'view_link_text', $filter );
-  $slideshow = get_field( 'splash_page_slideshow', $filter );
-  $speed = get_field( 'splash_page_slideshow_speed', $filter );
+  $linkText = get_field( 'view_link_text', 'option' );
+  $slideshow = get_field( 'splash_page_slideshow', 'option' );
+  $speed = get_field( 'splash_page_slideshow_speed', 'option' );
   ?>
   <section id="homepage_slideshow" class="slideshow fssh">
     <input type="hidden" name="slideshow_timing" value="<?php echo $speed; ?>"/>
@@ -47,8 +46,9 @@ if ( isset( $_GET[ 'v' ] ) && $_GET[ 'v' ] == 'list' ) {
     <div class="lifestyleCaption">
       <div>
         <div>
-          <h2><?php echo $filter->name; ?></h2>
-          <?php echo term_description(); ?>
+          <h2><?php //echo $filter->name; ?>This is where the name would be.</h2>
+          <p>This is where the description would be</p>
+          <?php //echo term_description(); ?>
           <a href="?v=list" class="view"><?php echo $linkText; ?> ></a>
         </div>
       </div>
