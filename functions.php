@@ -122,7 +122,7 @@ function cka_register() {
     'publicly_queryable' => true,
     'show_ui' => true,
     'query_var' => true,
-    'menu_icon' => get_stylesheet_directory_uri() . '/images/portfolio.svg',
+    'menu_icon' => 'dashicons-art',
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
@@ -367,6 +367,7 @@ function create_taxonomies() {
             'edit.php?post_type=awards', // Awards
             'edit.php?post_type=portfolio', // Portfolio
             'edit.php?post_type=lifestyle', // Lifestyle
+            'edit.php?post_type=art', // Art
             'edit.php', // Posts
             'edit.php?post_type=realestate', // Real Estate
             //'link-manager.php', // Links
