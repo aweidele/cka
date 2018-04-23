@@ -1,9 +1,6 @@
 <?php
 get_header();
 ?>
-<p>Hello</p>
-<p><?php echo get_post_type(); ?></p>
-<p>Hello</p>
 <section id="portfolio">
   <div class="projects">
     <?php

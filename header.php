@@ -106,7 +106,7 @@ $template =  end(explode('/',get_page_template()));
   /*** LIFESTYLE PAGE NAVIGATION ***/
   } else if ($template == 'template_lifestyle.php' ||
              is_singular( 'lifestyle' ) ||
-             is_post_type_archive( 'lifestyle ') ||
+             is_post_type_archive( 'lifestyle' ) ||
              is_tax('product_filter')) {
     $filters = get_terms( 'product_filter' );
     $menu = array();
