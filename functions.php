@@ -102,36 +102,36 @@ function cka_register() {
 	register_post_type( 'lifestyle' , $args );
 
   /*** Art ***/
-  $labels = array(
-    'name' => _x('Art', 'post type general name'),
-    'singular_name' => _x('Art', 'post type singular name'),
-    'add_new' => _x('Add New Art', 'portfolio item'),
-    'add_new_item' => __('Add New Art'),
-    'edit_item' => __('Edit Art'),
-    'new_item' => __('New Art'),
-    'view_item' => __('View Art'),
-    'search_items' => __('Search Art'),
-    'not_found' =>  __('Nothing found'),
-    'not_found_in_trash' => __('Nothing found in Trash'),
-    'parent_item_colon' => ''
-  );
-
-  $args = array(
-    'labels' => $labels,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'query_var' => true,
-    'menu_icon' => 'dashicons-art',
-    'capability_type' => 'post',
-    'hierarchical' => false,
-    'menu_position' => null,
-    'supports' => array('title','editor','thumbnail','excerpt'),
-    'has_archive' => true,
-    //"menu_position" => 21
-    );
-
-  register_post_type( 'art' , $args );
+  // $labels = array(
+  //   'name' => _x('Art', 'post type general name'),
+  //   'singular_name' => _x('Art', 'post type singular name'),
+  //   'add_new' => _x('Add New Art', 'portfolio item'),
+  //   'add_new_item' => __('Add New Art'),
+  //   'edit_item' => __('Edit Art'),
+  //   'new_item' => __('New Art'),
+  //   'view_item' => __('View Art'),
+  //   'search_items' => __('Search Art'),
+  //   'not_found' =>  __('Nothing found'),
+  //   'not_found_in_trash' => __('Nothing found in Trash'),
+  //   'parent_item_colon' => ''
+  // );
+  //
+  // $args = array(
+  //   'labels' => $labels,
+  //   'public' => true,
+  //   'publicly_queryable' => true,
+  //   'show_ui' => true,
+  //   'query_var' => true,
+  //   'menu_icon' => 'dashicons-art',
+  //   'capability_type' => 'post',
+  //   'hierarchical' => false,
+  //   'menu_position' => null,
+  //   'supports' => array('title','editor','thumbnail','excerpt'),
+  //   'has_archive' => true,
+  //   //"menu_position" => 21
+  //   );
+  //
+  // register_post_type( 'art' , $args );
 
 	/*** Awards ***/
 	$labels = array(
@@ -274,25 +274,25 @@ function create_taxonomies() {
         )
     );
     // Add Art Filter Taxonomy
-    register_taxonomy(
-        'art_filter',
-        'art',
-        array(
-            'labels' => array(
-                'name'              => _x( 'Art Filters' , 'taxonomy general name' ),
-                'singular_name'     => _x( 'Art Filter' , 'taxonomy singular name'),
-                'add_new_item' => 'Add Filter',
-                'new_item_name' => "New Filter"
-            ),
-            'show_ui' => true,
-            'show_admin_column' => true,
-            'show_tagcloud' => false,
-            'hierarchical' => true,
-            'support' => array('tags'),
-            'rewrite' => array(
-              'slug' => 'art/filter'),
-        )
-    );
+    // register_taxonomy(
+    //     'art_filter',
+    //     'art',
+    //     array(
+    //         'labels' => array(
+    //             'name'              => _x( 'Art Filters' , 'taxonomy general name' ),
+    //             'singular_name'     => _x( 'Art Filter' , 'taxonomy singular name'),
+    //             'add_new_item' => 'Add Filter',
+    //             'new_item_name' => "New Filter"
+    //         ),
+    //         'show_ui' => true,
+    //         'show_admin_column' => true,
+    //         'show_tagcloud' => false,
+    //         'hierarchical' => true,
+    //         'support' => array('tags'),
+    //         'rewrite' => array(
+    //           'slug' => 'art/filter'),
+    //     )
+    // );
     // Add News Filter Taxonomy
     register_taxonomy(
         'heading',
