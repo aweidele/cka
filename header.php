@@ -81,7 +81,7 @@ $template =  end(explode('/',get_page_template()));
     foreach($filters as $filter) {
       $menu[] = array(
         "name" => $filter->name,
-        "link" => get_term_link($filter->name, 'filter')
+        "link" => get_term_link($filter->slug, 'filter')
       );
     }
 
