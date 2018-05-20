@@ -455,4 +455,10 @@ function my_acf_admin_head() {
 
 add_action( 'acf/input/admin_head', 'my_acf_admin_head' );
 
+acf_add_options_sub_page(array(
+  'page_title' 	=> 'Product Splash Page',
+  'menu_title'	=> 'Product Splash Page',
+  'parent_slug'	=> 'edit',
+));
+
 ?>
