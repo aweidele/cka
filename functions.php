@@ -361,6 +361,13 @@ if ( function_exists( 'acf_add_options_sub_page' ) ){
 		'parent'     => 'edit.php?post_type=art',
 		'capability' => 'manage_options'
 	));
+
+  acf_add_options_sub_page(array(
+    'page_title' 	=> 'Product Splash Page',
+    'menu_title'	=> 'Product Splash Page',
+    'parent'     => 'edit.php?post_type=lifestyle',
+  	'capability' => 'manage_options'
+  ));
 }
 
 /**** REORDER ADMIN MENU ITEMS ***  */
@@ -455,11 +462,6 @@ function my_acf_admin_head() {
 
 add_action( 'acf/input/admin_head', 'my_acf_admin_head' );
 
-acf_add_options_sub_page(array(
-  'page_title' 	=> 'Product Splash Page',
-  'menu_title'	=> 'Product Splash Page',
-  'parent'     => 'edit.php?post_type=lifestyle',
-	'capability' => 'manage_options'
-));
+
 
 ?>
