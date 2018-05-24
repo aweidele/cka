@@ -1,5 +1,7 @@
 <?php
 get_header();
+if ( isset( $_GET[ 'v' ] ) && $_GET[ 'v' ] == 'list' ) {
+  ?>
 ?>
 <section id="portfolio">
   <div class="projects">
@@ -31,5 +33,30 @@ get_header();
   </div>
 </section>
 <?php
-get_footer();
+} else {
+  $title = get_field( 'splash_page_title', 'option' );
+  $description = get_field( 'splash_page_description', 'option' );
+  $linkText = get_field( 'splash_page_link_text', 'option' );
+  $slideshow = get_field( 'splash_page_slideshow', 'option' );
+  $speed = get_field( 'splash_page_slideshow_speed', 'option' );
 ?>
+<section id="homepage_slideshow" class="slideshow fssh">
+  <input type="hidden" name="slideshow_timing" value="<?php echo $speed; ?>"/>
+  <?php foreach($slideshow as $i => $slide) { ?>
+  <div class="slide" id="slide_<?php echo $i; ?>">
+    <img src="<?php echo $slide['sizes']['Homepage Slideshow']; ?>"/>
+  </div>
+  <?php } ?>
+  <div class="lifestyleCaption">
+    <div>
+      <div>
+        <h2><?php echo $title; ?></h2>
+        <?php echo $description; ?>
+        <a href="?v=list" class="view"><?php echo $linkText; ?> ></a>
+      </div>
+    </div>
+  </div>
+</section>
+<?php
+}
+get_footer();
