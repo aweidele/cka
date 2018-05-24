@@ -1,12 +1,12 @@
 {
-    "key": "group_54a08683400a1",
-    "title": "Portfolio",
+    "key": "group_5495c7f19fe30",
+    "title": "Top Level Pages",
     "fields": [
         {
-            "key": "field_54a08698d32d3",
-            "label": "Subhead",
-            "name": "subhead",
-            "type": "text",
+            "key": "field_54a0602352b28",
+            "label": "Slideshow Timing",
+            "name": "slideshow_timing",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -19,14 +19,16 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
+            "min": "",
+            "max": "",
+            "step": "",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "key": "field_54a3211a62dbe",
-            "label": "Gallery",
-            "name": "gallery",
+            "key": "field_5495c80bc988a",
+            "label": "Slideshow",
+            "name": "slideshow",
             "type": "gallery",
             "instructions": "",
             "required": 0,
@@ -53,33 +55,19 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "portfolio"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "lifestyle"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
+                "value": "template_toplevel.php"
             }
         ]
     ],
-    "menu_order": 8,
-    "position": "acf_after_title",
+    "menu_order": 11,
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527162137
+    "modified": 1527162207
 }
