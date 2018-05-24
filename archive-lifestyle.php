@@ -1,7 +1,6 @@
 <?php
 get_header();
 if ( isset( $_GET[ 'v' ] ) && $_GET[ 'v' ] == 'list' ) {
-  ?>
 ?>
 <section id="portfolio">
   <div class="projects">
