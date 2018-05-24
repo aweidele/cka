@@ -86,25 +86,6 @@
             "step": ""
         },
         {
-            "key": "field_5b01dc3b42819",
-            "label": "Splash Page Link",
-            "name": "splash_page_link",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
             "key": "field_5b01dc574281a",
             "label": "Splash Page Link Text",
             "name": "splash_page_link_text",
@@ -113,7 +94,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -141,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1526848804
+    "modified": 1527160928
 }
